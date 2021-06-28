@@ -1,6 +1,0 @@
-Date game : pon., 28 cze 2021 18:38:55 CEST
-Level : medium
-Game Size : big
-Score (apples eaten) : 2
-
-
