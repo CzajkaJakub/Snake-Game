@@ -37,6 +37,8 @@ public class GamePanel extends JPanel implements ActionListener {
     static int applesEaten;
     static int appleX;
     static int appleY;
+    static String level;
+    static String gameSize;
     static char direction = 'R';
     static boolean running = false;
     final MusicPanel music = new MusicPanel();
@@ -54,8 +56,10 @@ public class GamePanel extends JPanel implements ActionListener {
 
 
     public void settingsPanel(SettingsFrame settingsFrame){
-        delay = levels.get(settingsFrame.getUserLevel());
-        unitSize = gameUnit.get(settingsFrame.getUserUnit());
+        gameSize = settingsFrame.getUserUnit();
+        level = settingsFrame.getUserLevel();
+        delay = levels.get(level);
+        unitSize = gameUnit.get(gameSize);
         gameUnits = (screenWidth*screenHeight)/unitSize;
         x = new int[gameUnits];
         y = new int[gameUnits];
@@ -163,7 +167,7 @@ public class GamePanel extends JPanel implements ActionListener {
         }
     }
 
-    public void gameOver(Graphics g){
+    public void gameOver(Graphics g) throws IOException {
         g.setColor(Color.red);
         g.setFont(new Font("Ink Free", Font.BOLD, 75));
         FontMetrics metrics = getFontMetrics(g.getFont());
@@ -172,6 +176,7 @@ public class GamePanel extends JPanel implements ActionListener {
         g.setColor(Color.green);
         g.setFont(new Font("Ink Free", Font.BOLD, 50));
         g.drawString(score, (screenWidth - metrics.stringWidth(score))/2, screenHeight*2/3);
+        new SaveRecord(applesEaten, gameSize, level);
     }
 
 
