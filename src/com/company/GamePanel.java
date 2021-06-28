@@ -1,21 +1,25 @@
 package com.company;
 
+
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Random;
 
 
 public class GamePanel extends JPanel implements ActionListener {
 
-    static final HashMap<String, Integer> levels = new HashMap<>(){{
+    private static final HashMap<String, Integer> levels = new HashMap<>(){{
         put("easy", 100);
         put("medium", 70);
         put("hard", 40);
     }};
 
-    static final HashMap<String, Integer> gameUnit = new HashMap<>(){{
+    private static final HashMap<String, Integer> gameUnit = new HashMap<>(){{
         put("small", 75);
         put("medium", 45);
         put("big", 30);
@@ -24,40 +28,40 @@ public class GamePanel extends JPanel implements ActionListener {
 
     final static int screenWidth = 900;
     final static int screenHeight = 900;
-    static int unitSize = 10;
+    static int unitSize;
     static int gameUnits;
     static int delay;
-    int[] x;
-    int[] y;
-    int bodyParts = 6;
-    int applesEaten;
-    int appleX;
-    int appleY;
-    char direction = 'R';
-    boolean running = false;
+    static int[] x;
+    static int[] y;
+    static int bodyParts = 6;
+    static int applesEaten;
+    static int appleX;
+    static int appleY;
+    static char direction = 'R';
+    static boolean running = false;
+    final MusicPanel music = new MusicPanel();
     Timer timer;
     Random random;
 
-
-
-    GamePanel(SettingsFrame settingsFrame){
-        delay = levels.get(settingsFrame.getUserLevel());
-        unitSize = gameUnit.get(settingsFrame.getUserUnit());
-        System.out.println(unitSize);
-        gameUnits = (screenWidth*screenHeight)/unitSize;
-        x = new int[gameUnits];
-        y = new int[gameUnits];
-        random = new Random();
+    GamePanel(SettingsFrame settingsFrame) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
         this.setBackground(Color.black);
         this.setFocusable(true);
         this.addKeyListener(new MyKeyAdapter());
-        settingsPanel();
+        settingsPanel(settingsFrame);
 
     }
 
-    public void settingsPanel(){
+
+    public void settingsPanel(SettingsFrame settingsFrame){
+        delay = levels.get(settingsFrame.getUserLevel());
+        unitSize = gameUnit.get(settingsFrame.getUserUnit());
+        gameUnits = (screenWidth*screenHeight)/unitSize;
+        x = new int[gameUnits];
+        y = new int[gameUnits];
+        random = new Random();
         startGame();
+
     }
 
     public void startGame(){
@@ -71,10 +75,14 @@ public class GamePanel extends JPanel implements ActionListener {
 
     public void paintComponent(Graphics g){
         super.paintComponent(g);
-        draw(g);
+        try {
+            draw(g);
+        } catch (LineUnavailableException | IOException e) {
+            e.printStackTrace();
+        }
     }
 
-    public void draw(Graphics g){
+    public void draw(Graphics g) throws LineUnavailableException, IOException {
         if(running) {
             g.setColor(Color.red);
             g.fillOval(appleX, appleY, unitSize, unitSize);
@@ -90,6 +98,8 @@ public class GamePanel extends JPanel implements ActionListener {
             }
         }
         else{
+            music.stopPlayBackgroundMusic();
+            music.playGameOverMusic();
             gameOver(g);
         }
     }
@@ -115,8 +125,9 @@ public class GamePanel extends JPanel implements ActionListener {
         }
     }
 
-    public void checkPoint(){
+    public void checkPoint() throws LineUnavailableException, IOException, InterruptedException, UnsupportedAudioFileException {
         if((x[0] == appleX)&&(y[0] == appleY)){
+            music.playPointCollectMusic();
             newApple();
             applesEaten ++;
             bodyParts ++;
@@ -170,14 +181,18 @@ public class GamePanel extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if(running){
             move();
-            checkPoint();
+            try {
+                checkPoint();
+            } catch (LineUnavailableException | IOException | InterruptedException | UnsupportedAudioFileException lineUnavailableException) {
+                lineUnavailableException.printStackTrace();
+            }
             checkCollision();
         }
         repaint();
 
     }
 
-    public class MyKeyAdapter extends KeyAdapter {
+    public static class MyKeyAdapter extends KeyAdapter {
         @Override
         public void keyPressed(KeyEvent e) {
             if (e.getKeyCode() == KeyEvent.VK_LEFT) {

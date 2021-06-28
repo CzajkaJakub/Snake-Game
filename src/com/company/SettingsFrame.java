@@ -11,7 +11,7 @@ public class SettingsFrame {
     private static String userUnits;
 
 
-    public SettingsFrame() {
+    SettingsFrame() {
         setUserLevel();
         setUserUnit();
     }
