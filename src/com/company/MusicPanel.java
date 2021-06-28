@@ -12,42 +12,38 @@ public class MusicPanel {
     private final File pointCollectFile = new File("src/song/pointCollect.wav");
     private final File gameOverFile = new File("src/song/gameOver.wav");
 
-    private final AudioInputStream backGroundAudio = AudioSystem.getAudioInputStream(backGroundMusicFile);
-    private final AudioInputStream gameOverAudio = AudioSystem.getAudioInputStream(gameOverFile);
-    AudioInputStream pointCollectAudio = AudioSystem.getAudioInputStream(pointCollectFile);
+    AudioInputStream backGroundAudio = AudioSystem.getAudioInputStream(backGroundMusicFile);
+    Clip backGroundClip = AudioSystem.getClip();
 
-
-    private final Clip backGroundClip = AudioSystem.getClip();
-    private final Clip gameOverClip = AudioSystem.getClip();
-    Clip pointCollectClip = AudioSystem.getClip();
 
     public MusicPanel() throws LineUnavailableException, UnsupportedAudioFileException, IOException {
         playBackgroundMusic();
     }
 
 
-    public void playBackgroundMusic() throws LineUnavailableException, IOException {
+    public void playBackgroundMusic() throws LineUnavailableException, IOException, UnsupportedAudioFileException {
+        backGroundAudio = AudioSystem.getAudioInputStream(backGroundMusicFile);
+        backGroundClip = AudioSystem.getClip();
         backGroundClip.open(backGroundAudio);
         backGroundClip.start();
     }
 
     public void playPointCollectMusic() throws LineUnavailableException, IOException, UnsupportedAudioFileException {
-        pointCollectAudio = AudioSystem.getAudioInputStream(pointCollectFile);
-        pointCollectClip = AudioSystem.getClip();
+        AudioInputStream pointCollectAudio = AudioSystem.getAudioInputStream(pointCollectFile);
+        Clip pointCollectClip = AudioSystem.getClip();
         pointCollectClip.open(pointCollectAudio);
         pointCollectClip.start();
-
     }
 
-    public void playGameOverMusic() throws LineUnavailableException, IOException {
+    public void playGameOverMusic() throws LineUnavailableException, IOException, UnsupportedAudioFileException {
+        backGroundClip.stop();
+        AudioInputStream gameOverAudio = AudioSystem.getAudioInputStream(gameOverFile);
+        Clip gameOverClip = AudioSystem.getClip();
         gameOverClip.open(gameOverAudio);
         gameOverClip.start();
     }
 
-    public void stopPlayBackgroundMusic(){
-        backGroundClip.stop();
-        backGroundClip.close();
-    }
+
 
 
 

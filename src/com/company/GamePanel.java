@@ -41,11 +41,11 @@ public class GamePanel extends JPanel implements ActionListener {
     static String gameSize;
     static char direction = 'R';
     static boolean running = false;
-    final MusicPanel music = new MusicPanel();
+    MusicPanel music = new MusicPanel();
     Timer timer;
     Random random;
 
-    GamePanel(SettingsFrame settingsFrame) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+    GamePanel(SettingsFrame settingsFrame) throws IOException, LineUnavailableException, UnsupportedAudioFileException {
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
         this.setBackground(Color.black);
         this.setFocusable(true);
@@ -81,12 +81,12 @@ public class GamePanel extends JPanel implements ActionListener {
         super.paintComponent(g);
         try {
             draw(g);
-        } catch (LineUnavailableException | IOException e) {
+        } catch (LineUnavailableException | IOException | UnsupportedAudioFileException e) {
             e.printStackTrace();
         }
     }
 
-    public void draw(Graphics g) throws LineUnavailableException, IOException {
+    public void draw(Graphics g) throws LineUnavailableException, IOException, UnsupportedAudioFileException {
         if(running) {
             g.setColor(Color.red);
             g.fillOval(appleX, appleY, unitSize, unitSize);
@@ -102,8 +102,6 @@ public class GamePanel extends JPanel implements ActionListener {
             }
         }
         else{
-            music.stopPlayBackgroundMusic();
-            music.playGameOverMusic();
             gameOver(g);
         }
     }
@@ -111,8 +109,6 @@ public class GamePanel extends JPanel implements ActionListener {
     public void newApple(){
         appleY = random.nextInt((screenWidth/unitSize))*unitSize;
         appleX = random.nextInt((screenHeight/unitSize))*unitSize;
-
-
     }
 
     public void move(){
@@ -131,19 +127,22 @@ public class GamePanel extends JPanel implements ActionListener {
 
     public void checkPoint() throws LineUnavailableException, IOException, InterruptedException, UnsupportedAudioFileException {
         if((x[0] == appleX)&&(y[0] == appleY)){
-            music.playPointCollectMusic();
             newApple();
+            makeCollectSound();
             applesEaten ++;
             bodyParts ++;
 
         }
     }
 
-    public void checkCollision(){
+    public void makeCollectSound() throws UnsupportedAudioFileException, LineUnavailableException, IOException {
+        music.playPointCollectMusic();
+    }
+
+    public void checkCollision() throws UnsupportedAudioFileException, LineUnavailableException, IOException {
         for(int i= bodyParts; i>0; i--){
             if ((x[0] == x[i]) && (y[0] == y[i])) {
                 running = false;
-                break;
             }
 
             if(x[0] < 0){
@@ -160,6 +159,7 @@ public class GamePanel extends JPanel implements ActionListener {
             }
 
             if(!running){
+                music.playGameOverMusic();
                 timer.stop();
             }
 
@@ -167,7 +167,7 @@ public class GamePanel extends JPanel implements ActionListener {
         }
     }
 
-    public void gameOver(Graphics g) throws IOException {
+    public void gameOver(Graphics g) throws IOException{
         g.setColor(Color.red);
         g.setFont(new Font("Ink Free", Font.BOLD, 75));
         FontMetrics metrics = getFontMetrics(g.getFont());
@@ -191,9 +191,14 @@ public class GamePanel extends JPanel implements ActionListener {
             } catch (LineUnavailableException | IOException | InterruptedException | UnsupportedAudioFileException lineUnavailableException) {
                 lineUnavailableException.printStackTrace();
             }
-            checkCollision();
+            try {
+                checkCollision();
+            } catch (UnsupportedAudioFileException | LineUnavailableException | IOException unsupportedAudioFileException) {
+                unsupportedAudioFileException.printStackTrace();
+            }
         }
         repaint();
+
 
     }
 
