@@ -15,32 +15,46 @@ public class MusicPanel {
     AudioInputStream backGroundAudio = AudioSystem.getAudioInputStream(backGroundMusicFile);
     Clip backGroundClip = AudioSystem.getClip();
 
+    AudioInputStream pointCollectAudio = AudioSystem.getAudioInputStream(pointCollectFile);
+    Clip pointCollectClip = AudioSystem.getClip();
+
+    AudioInputStream gameOverAudio = AudioSystem.getAudioInputStream(gameOverFile);
+    Clip gameOverClip = AudioSystem.getClip();
+
 
     public MusicPanel() throws LineUnavailableException, UnsupportedAudioFileException, IOException {
+        pointCollectClip.open(pointCollectAudio);
+        backGroundClip.open(backGroundAudio);
+        gameOverClip.open(gameOverAudio);
         playBackgroundMusic();
     }
 
 
-    public void playBackgroundMusic() throws LineUnavailableException, IOException, UnsupportedAudioFileException {
-        backGroundAudio = AudioSystem.getAudioInputStream(backGroundMusicFile);
-        backGroundClip = AudioSystem.getClip();
-        backGroundClip.open(backGroundAudio);
+    public void playBackgroundMusic(){
         backGroundClip.start();
     }
 
-    public void playPointCollectMusic() throws LineUnavailableException, IOException, UnsupportedAudioFileException {
-        AudioInputStream pointCollectAudio = AudioSystem.getAudioInputStream(pointCollectFile);
-        Clip pointCollectClip = AudioSystem.getClip();
-        pointCollectClip.open(pointCollectAudio);
+    public void playPointCollectMusic(){
+        pointCollectClip.setMicrosecondPosition(0);
         pointCollectClip.start();
     }
 
-    public void playGameOverMusic() throws LineUnavailableException, IOException, UnsupportedAudioFileException {
-        backGroundClip.stop();
-        AudioInputStream gameOverAudio = AudioSystem.getAudioInputStream(gameOverFile);
-        Clip gameOverClip = AudioSystem.getClip();
-        gameOverClip.open(gameOverAudio);
+    public void playGameOverMusic() throws IOException {
+        stopPlayingBackgroundMusic();
+        stopPlayingCollectionPointsMusic();
         gameOverClip.start();
+    }
+
+    public void stopPlayingBackgroundMusic() throws IOException {
+        backGroundClip.stop();
+        backGroundClip.close();
+        backGroundAudio.close();
+    }
+
+    public void stopPlayingCollectionPointsMusic() throws IOException {
+        pointCollectClip.stop();
+        pointCollectClip.close();
+        pointCollectAudio.close();
     }
 
 

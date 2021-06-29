@@ -4,3 +4,51 @@ Game Size : big
 Score (apples eaten) : 4
 
 
+Date game : wt., 29 cze 2021 11:30:49 CEST
+Level : hard
+Game Size : huge
+Score (apples eaten) : 6
+
+
+Date game : wt., 29 cze 2021 11:38:03 CEST
+Level : easy
+Game Size : huge
+Score (apples eaten) : 16
+
+
+Date game : wt., 29 cze 2021 12:00:50 CEST
+Level : easy
+Game Size : small
+Score (apples eaten) : 5
+
+
+Date game : wt., 29 cze 2021 13:05:21 CEST
+Level : easy
+Game Size : small
+Score (apples eaten) : 4
+
+
+Date game : wt., 29 cze 2021 13:09:41 CEST
+Level : easy
+Game Size : small
+Score (apples eaten) : 0
+
+
+Date game : wt., 29 cze 2021 13:10:04 CEST
+Level : hard
+Game Size : huge
+Score (apples eaten) : 4
+
+
+Date game : wt., 29 cze 2021 13:11:17 CEST
+Level : hard
+Game Size : big
+Score (apples eaten) : 5
+
+
+Date game : wt., 29 cze 2021 13:13:44 CEST
+Level : hard
+Game Size : big
+Score (apples eaten) : 4
+
+
