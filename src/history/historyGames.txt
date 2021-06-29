@@ -52,3 +52,21 @@ Game Size : big
 Score (apples eaten) : 4
 
 
+Date game : wt., 29 cze 2021 13:46:06 CEST
+Level : easy
+Game Size : small
+Score (apples eaten) : 4
+
+
+Date game : wt., 29 cze 2021 13:46:29 CEST
+Level : easy
+Game Size : small
+Score (apples eaten) : 7
+
+
+Date game : wt., 29 cze 2021 13:46:39 CEST
+Level : easy
+Game Size : medium
+Score (apples eaten) : 0
+
+
