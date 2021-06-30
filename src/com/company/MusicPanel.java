@@ -8,9 +8,11 @@ import java.io.IOException;
 
 public class MusicPanel {
 
-    private final File backGroundMusicFile = new File("src/song/backgroundMusic.wav");
-    private final File pointCollectFile = new File("src/song/pointCollect.wav");
-    private final File gameOverFile = new File("src/song/gameOver.wav");
+    private final static File backGroundMusicFile = new File("src/song/backgroundMusic.wav");
+    private final static File pointCollectFile = new File("src/song/pointCollect.wav");
+    private final static File gameOverFile = new File("src/song/gameOver.wav");
+
+
 
     AudioInputStream backGroundAudio = AudioSystem.getAudioInputStream(backGroundMusicFile);
     Clip backGroundClip = AudioSystem.getClip();
@@ -26,11 +28,11 @@ public class MusicPanel {
         pointCollectClip.open(pointCollectAudio);
         backGroundClip.open(backGroundAudio);
         gameOverClip.open(gameOverAudio);
-        playBackgroundMusic();
     }
 
 
     public void playBackgroundMusic(){
+        backGroundClip.setMicrosecondPosition(0);
         backGroundClip.start();
     }
 
@@ -42,6 +44,7 @@ public class MusicPanel {
     public void playGameOverMusic() throws IOException {
         stopPlayingBackgroundMusic();
         stopPlayingCollectionPointsMusic();
+        gameOverClip.setMicrosecondPosition(0);
         gameOverClip.start();
     }
 
@@ -55,6 +58,12 @@ public class MusicPanel {
         pointCollectClip.stop();
         pointCollectClip.close();
         pointCollectAudio.close();
+    }
+
+    public void  stopPlayingGameOverMusic() throws IOException {
+        gameOverClip.stop();
+        gameOverClip.close();
+        gameOverAudio.close();
     }
 
 

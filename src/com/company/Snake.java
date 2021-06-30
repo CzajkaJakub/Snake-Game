@@ -8,8 +8,8 @@ import java.io.IOException;
 public class Snake {
 
     public static void main(String[] args) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
-        SettingsFrame settingsFrame = new SettingsFrame();
-        new GameFrame(settingsFrame);
+        new SettingsFrame();
+
     }
 }
 

@@ -7,8 +7,8 @@ import java.io.IOException;
 
 
 public class GameFrame extends JFrame {
-    GameFrame(SettingsFrame settingsFrame) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
-        GamePanel panel = new GamePanel(settingsFrame);
+    GameFrame(String level, String units) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        GamePanel panel = new GamePanel(level, units);
         ImageIcon snakeIcon = new ImageIcon("images/snake.png");
         this.setIconImage(snakeIcon.getImage());
         this.add(panel);

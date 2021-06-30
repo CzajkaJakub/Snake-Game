@@ -20,9 +20,8 @@ public class GamePanel extends JPanel implements ActionListener {
     }};
 
     private static final HashMap<String, Integer> gameUnit = new HashMap<>(){{
-        put("small", 75);
-        put("medium", 45);
-        put("big", 30);
+        put("small", 45);
+        put("medium", 30);
         put("huge", 10);
     }};
 
@@ -45,25 +44,26 @@ public class GamePanel extends JPanel implements ActionListener {
     Timer timer;
     Random random;
 
-    GamePanel(SettingsFrame settingsFrame) throws IOException, LineUnavailableException, UnsupportedAudioFileException {
+    GamePanel(String level, String units) throws IOException, LineUnavailableException, UnsupportedAudioFileException {
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
         this.setBackground(Color.black);
         this.setFocusable(true);
         this.addKeyListener(new MyKeyAdapter());
-        settingsPanel(settingsFrame);
+        settingsPanel(level, units);
 
     }
 
 
-    public void settingsPanel(SettingsFrame settingsFrame){
-        gameSize = settingsFrame.getUserUnit();
-        level = settingsFrame.getUserLevel();
+    public void settingsPanel(String lev, String units){
+        gameSize = units;
+        level = lev;
         delay = levels.get(level);
         unitSize = gameUnit.get(gameSize);
         gameUnits = (screenWidth*screenHeight)/unitSize;
         x = new int[gameUnits];
         y = new int[gameUnits];
         random = new Random();
+        music.playBackgroundMusic();
         startGame();
 
     }
