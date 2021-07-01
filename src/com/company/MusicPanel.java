@@ -70,12 +70,6 @@ public class MusicPanel {
         pointCollectAudio.close();
     }
 
-    public static void  stopPlayingGameOverMusic() throws IOException {
-        gameOverClip.stop();
-        gameOverClip.close();
-        gameOverAudio.close();
-    }
-
     public static void playSnakeSong(){
         snakeSoundClip.setMicrosecondPosition(0);
         snakeSoundClip.start();

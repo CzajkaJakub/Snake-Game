@@ -43,7 +43,7 @@ public class GamePanel extends JPanel implements ActionListener {
     Timer timer;
     Random random;
 
-    GamePanel(String level, String units) throws IOException, LineUnavailableException, UnsupportedAudioFileException {
+    GamePanel(String level, String units){
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
         this.setBackground(Color.black);
         this.setFocusable(true);
@@ -132,7 +132,7 @@ public class GamePanel extends JPanel implements ActionListener {
         }
     }
 
-    public void makeCollectSound() throws UnsupportedAudioFileException, LineUnavailableException, IOException {
+    public void makeCollectSound(){
         MusicPanel.playPointCollectMusic();
     }
 
@@ -215,5 +215,6 @@ public class GamePanel extends JPanel implements ActionListener {
             }
         }
     }
+
 }
 

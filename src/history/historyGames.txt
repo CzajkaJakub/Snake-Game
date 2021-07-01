@@ -274,3 +274,159 @@ Game Size : huge
 Score (apples eaten) : 0
 
 
+Date game : czw., 01 lip 2021 12:27:01 CEST
+Level : hard
+Game Size : medium
+Score (apples eaten) : 6
+
+
+Date game : czw., 01 lip 2021 12:27:07 CEST
+Level : medium
+Game Size : huge
+Score (apples eaten) : 6
+
+
+Date game : czw., 01 lip 2021 12:27:07 CEST
+Level : medium
+Game Size : huge
+Score (apples eaten) : 6
+
+
+Date game : czw., 01 lip 2021 12:27:29 CEST
+Level : hard
+Game Size : medium
+Score (apples eaten) : 3
+
+
+Date game : czw., 01 lip 2021 12:27:49 CEST
+Level : hard
+Game Size : huge
+Score (apples eaten) : 4
+
+
+Date game : czw., 01 lip 2021 12:27:49 CEST
+Level : hard
+Game Size : huge
+Score (apples eaten) : 4
+
+
+Date game : czw., 01 lip 2021 12:29:25 CEST
+Level : hard
+Game Size : medium
+Score (apples eaten) : 2
+
+
+Date game : czw., 01 lip 2021 12:36:32 CEST
+Level : hard
+Game Size : huge
+Score (apples eaten) : 0
+
+
+Date game : czw., 01 lip 2021 12:37:11 CEST
+Level : hard
+Game Size : huge
+Score (apples eaten) : 0
+
+
+Date game : czw., 01 lip 2021 12:37:15 CEST
+Level : medium
+Game Size : small
+Score (apples eaten) : 0
+
+
+Date game : czw., 01 lip 2021 12:37:15 CEST
+Level : medium
+Game Size : small
+Score (apples eaten) : 0
+
+
+Date game : czw., 01 lip 2021 12:37:18 CEST
+Level : medium
+Game Size : small
+Score (apples eaten) : 0
+
+
+Date game : czw., 01 lip 2021 12:37:18 CEST
+Level : medium
+Game Size : small
+Score (apples eaten) : 0
+
+
+Date game : czw., 01 lip 2021 12:37:18 CEST
+Level : medium
+Game Size : small
+Score (apples eaten) : 0
+
+
+Date game : czw., 01 lip 2021 12:37:18 CEST
+Level : medium
+Game Size : small
+Score (apples eaten) : 0
+
+
+Date game : czw., 01 lip 2021 12:37:18 CEST
+Level : medium
+Game Size : small
+Score (apples eaten) : 0
+
+
+Date game : czw., 01 lip 2021 12:37:18 CEST
+Level : medium
+Game Size : small
+Score (apples eaten) : 0
+
+
+Date game : czw., 01 lip 2021 12:39:17 CEST
+Level : hard
+Game Size : huge
+Score (apples eaten) : 0
+
+
+Date game : czw., 01 lip 2021 12:39:45 CEST
+Level : hard
+Game Size : medium
+Score (apples eaten) : 0
+
+
+Date game : czw., 01 lip 2021 12:45:31 CEST
+Level : hard
+Game Size : medium
+Score (apples eaten) : 2
+
+
+Date game : czw., 01 lip 2021 12:46:49 CEST
+Level : hard
+Game Size : huge
+Score (apples eaten) : 0
+
+
+Date game : czw., 01 lip 2021 12:47:22 CEST
+Level : hard
+Game Size : huge
+Score (apples eaten) : 0
+
+
+Date game : czw., 01 lip 2021 12:47:40 CEST
+Level : hard
+Game Size : medium
+Score (apples eaten) : 0
+
+
+Date game : czw., 01 lip 2021 12:48:33 CEST
+Level : hard
+Game Size : medium
+Score (apples eaten) : 1
+
+
+Date game : czw., 01 lip 2021 12:49:23 CEST
+Level : hard
+Game Size : medium
+Score (apples eaten) : 2
+
+
+Date game : czw., 01 lip 2021 12:49:40 CEST
+Level : medium
+Game Size : medium
+Score (apples eaten) : 6
+
+
