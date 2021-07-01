@@ -268,9 +268,3 @@ Game Size : huge
 Score (apples eaten) : 2
 
 
-Date game : czw., 01 lip 2021 12:22:57 CEST
-Level : hard
-Game Size : huge
-Score (apples eaten) : 0
-
-

@@ -14,7 +14,6 @@ public class Button extends JButton {
         this.setBounds(x, y, 200, 40);
         this.setFont(new Font("MV Boli", Font.BOLD, 40));
         this.setBackground(Color.black);
-        this.setForeground(Color.green);
         this.setBorderPainted(false);
         this.setForeground(new Color(18, 131, 14));
         this.setContentAreaFilled(false);
@@ -28,7 +27,6 @@ public class Button extends JButton {
         this.setBounds(x, y, w, 40);
         this.setFont(new Font("MV Boli", Font.BOLD, 40));
         this.setBackground(Color.black);
-        this.setForeground(Color.green);
         this.setBorderPainted(false);
         this.setForeground(new Color(18, 131, 14));
         this.setContentAreaFilled(false);

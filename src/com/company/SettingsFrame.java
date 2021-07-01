@@ -30,11 +30,11 @@ public class SettingsFrame extends JFrame {
     final private static PreImage difWordL = new PreImage(difWord, 132, 550, 636, 70);
     final private static PreImage sizeWordL = new PreImage(sizeWord, 87, 700, 726, 70);
 
-    final private SnakeSound snakeSound = new SnakeSound();
     private static Button pressedLevel = easyLevel;
-    private  static Button pressedSize = smallWindow;
+    private static Button pressedSize = smallWindow;
 
-    SettingsFrame() throws UnsupportedAudioFileException, LineUnavailableException, IOException {
+    SettingsFrame(){
+        MusicPanel.playSnakeSong();
         setSettingsFrame();
         listeners();
     }
@@ -59,7 +59,7 @@ public class SettingsFrame extends JFrame {
 
     public void startGameButton() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
         if (!(userLevel == null || userUnits == null)){
-            snakeSound.stopSnakeSong();
+            MusicPanel.stopSnakeSong();
             this.setVisible(false);
             new GameFrame(getUserLevel(), getUserUnit());
         }

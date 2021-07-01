@@ -40,7 +40,6 @@ public class GamePanel extends JPanel implements ActionListener {
     static String gameSize;
     static char direction = 'R';
     static boolean running = false;
-    MusicPanel music = new MusicPanel();
     Timer timer;
     Random random;
 
@@ -50,7 +49,6 @@ public class GamePanel extends JPanel implements ActionListener {
         this.setFocusable(true);
         this.addKeyListener(new MyKeyAdapter());
         settingsPanel(level, units);
-
     }
 
 
@@ -63,7 +61,7 @@ public class GamePanel extends JPanel implements ActionListener {
         x = new int[gameUnits];
         y = new int[gameUnits];
         random = new Random();
-        music.playBackgroundMusic();
+        MusicPanel.playBackgroundMusic();
         startGame();
 
     }
@@ -102,7 +100,7 @@ public class GamePanel extends JPanel implements ActionListener {
             }
         }
         else{
-            gameOver(g);
+            gameOver();
         }
     }
 
@@ -131,56 +129,46 @@ public class GamePanel extends JPanel implements ActionListener {
             makeCollectSound();
             applesEaten ++;
             bodyParts ++;
-
         }
     }
 
     public void makeCollectSound() throws UnsupportedAudioFileException, LineUnavailableException, IOException {
-        music.playPointCollectMusic();
+        MusicPanel.playPointCollectMusic();
     }
 
     public void checkCollision() throws UnsupportedAudioFileException, LineUnavailableException, IOException {
         for(int i= bodyParts; i>0; i--){
             if ((x[0] == x[i]) && (y[0] == y[i])) {
                 running = false;
+                break;
             }
 
             if(x[0] < 0){
                 running = false;
+                break;
             }
             if(x[0] > screenWidth){
                 running = false;
+                break;
             }
             if(y[0] < 0){
                 running = false;
+                break;
             }
             if(y[0] > screenHeight){
                 running = false;
+                break;
             }
-
-            if(!running){
-                music.playGameOverMusic();
-                timer.stop();
-            }
-
-
+        }
+        if(!running){
+            timer.stop();
         }
     }
 
-    public void gameOver(Graphics g) throws IOException{
-        g.setColor(Color.red);
-        g.setFont(new Font("Ink Free", Font.BOLD, 75));
-        FontMetrics metrics = getFontMetrics(g.getFont());
-        g.drawString("Game Over", (screenWidth - metrics.stringWidth("Game Over"))/2, screenHeight/2);
-        String score = "Apples Eaten: " + applesEaten;
-        g.setColor(Color.green);
-        g.setFont(new Font("Ink Free", Font.BOLD, 50));
-        g.drawString(score, (screenWidth - metrics.stringWidth(score))/2, screenHeight*2/3);
-        new SaveRecord(applesEaten, gameSize, level);
+    public void gameOver() throws IOException{
+        MusicPanel.playGameOverMusic();
+        this.add(new GameOverPanel(applesEaten, gameSize, level));
     }
-
-
-
 
     @Override
     public void actionPerformed(ActionEvent e) {
