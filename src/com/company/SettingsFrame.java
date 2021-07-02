@@ -60,8 +60,7 @@ public class SettingsFrame extends JFrame {
     public void startGameButton() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
         if (!(userLevel == null || userUnits == null)){
             MusicPanel.stopSnakeSong();
-            this.setVisible(false);
-            new GameFrame(getUserLevel(), getUserUnit());
+            Snake.startGame(getUserLevel(), getUserUnit(), this);
         }
     }
 

@@ -1,11 +1,14 @@
 package com.company;
 
 
+import javax.imageio.ImageIO;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Random;
@@ -27,6 +30,11 @@ public class GamePanel extends JPanel implements ActionListener {
 
     final static int screenWidth = 900;
     final static int screenHeight = 900;
+    static BufferedImage appleImage;
+    static BufferedImage snakeHeadImageR;
+    static BufferedImage snakeHeadImageD;
+    static BufferedImage snakeHeadImageL;
+    static BufferedImage snakeHeadImageU;
     static int unitSize;
     static int gameUnits;
     static int delay;
@@ -43,7 +51,7 @@ public class GamePanel extends JPanel implements ActionListener {
     Timer timer;
     Random random;
 
-    GamePanel(String level, String units){
+    GamePanel(String level, String units) throws IOException {
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
         this.setBackground(Color.black);
         this.setFocusable(true);
@@ -52,7 +60,7 @@ public class GamePanel extends JPanel implements ActionListener {
     }
 
 
-    public void settingsPanel(String lev, String units){
+    public void settingsPanel(String lev, String units) throws IOException {
         gameSize = units;
         level = lev;
         delay = levels.get(level);
@@ -61,12 +69,21 @@ public class GamePanel extends JPanel implements ActionListener {
         x = new int[gameUnits];
         y = new int[gameUnits];
         random = new Random();
-        MusicPanel.playBackgroundMusic();
         startGame();
 
     }
 
-    public void startGame(){
+    public void readImages() throws IOException {
+        appleImage = ImageIO.read(new File("images/apple" + unitSize +".png"));
+        snakeHeadImageR = ImageIO.read((new File("images/snakeHeadR" + unitSize + ".png")));
+        snakeHeadImageD = ImageIO.read((new File("images/snakeHeadD" + unitSize + ".png")));
+        snakeHeadImageL = ImageIO.read((new File("images/snakeHeadL" + unitSize + ".png")));
+        snakeHeadImageU = ImageIO.read((new File("images/snakeHeadU" + unitSize + ".png")));
+    }
+
+    public void startGame() throws IOException {
+        MusicPanel.playBackgroundMusic();
+        readImages();
         newApple();
         running = true;
         timer = new Timer(delay, this);
@@ -74,29 +91,22 @@ public class GamePanel extends JPanel implements ActionListener {
     }
 
 
-
-    public void paintComponent(Graphics g){
-        super.paintComponent(g);
-        try {
-            draw(g);
-        } catch (LineUnavailableException | IOException | UnsupportedAudioFileException e) {
-            e.printStackTrace();
-        }
-    }
-
     public void draw(Graphics g) throws LineUnavailableException, IOException, UnsupportedAudioFileException {
         if(running) {
-            g.setColor(Color.red);
-            g.fillOval(appleX, appleY, unitSize, unitSize);
-
+            g.drawImage(appleImage, appleX, appleY, this);
             for (int i = 0; i < bodyParts; i++){
                 if(i == 0){
-                    g.setColor(Color.green);
+                    switch (direction) {
+                        case 'R' -> g.drawImage(snakeHeadImageR, x[i], y[i], this);
+                        case 'D' -> g.drawImage(snakeHeadImageD, x[i], y[i], this);
+                        case 'L' -> g.drawImage(snakeHeadImageL, x[i], y[i], this);
+                        case 'U' -> g.drawImage(snakeHeadImageU, x[i], y[i], this);
+                    }
                 }
                 else{
-                    g.setColor(new Color(45, 180, 0));
+                    g.setColor(new Color(38, 231, 6));
+                    g.fillOval(x[i], y[i], unitSize, unitSize);
                 }
-                g.fillRect(x[i], y[i], unitSize, unitSize);
             }
         }
         else{
@@ -132,9 +142,7 @@ public class GamePanel extends JPanel implements ActionListener {
         }
     }
 
-    public void makeCollectSound(){
-        MusicPanel.playPointCollectMusic();
-    }
+
 
     public void checkCollision() throws UnsupportedAudioFileException, LineUnavailableException, IOException {
         for(int i= bodyParts; i>0; i--){
@@ -163,6 +171,19 @@ public class GamePanel extends JPanel implements ActionListener {
         if(!running){
             timer.stop();
         }
+    }
+
+    public void paintComponent(Graphics g){
+        super.paintComponent(g);
+        try {
+            draw(g);
+        } catch (LineUnavailableException | IOException | UnsupportedAudioFileException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void makeCollectSound(){
+        MusicPanel.playPointCollectMusic();
     }
 
     public void gameOver() throws IOException{
