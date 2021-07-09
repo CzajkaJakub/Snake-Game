@@ -3,11 +3,13 @@ package com.company;
 import javax.swing.*;
 import java.io.IOException;
 
-
-public class GameFrame extends JFrame {
+public class GameFrame extends JFrame implements ImageFiles {
     GameFrame(String level, String units) throws IOException {
         GamePanel panel = new GamePanel(level, units);
-        ImageIcon snakeIcon = new ImageIcon("images/snake.png");
+        frameSettings(panel);
+    }
+
+    private void frameSettings(GamePanel panel){
         this.setIconImage(snakeIcon.getImage());
         this.add(panel);
         this.setTitle("Snake Game!");

@@ -10,23 +10,10 @@ import java.awt.event.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.Random;
 
 
-public class GamePanel extends JPanel implements ActionListener {
-
-    private static final HashMap<String, Integer> levels = new HashMap<>(){{
-        put("easy", 100);
-        put("medium", 70);
-        put("hard", 40);
-    }};
-
-    private static final HashMap<String, Integer> gameUnit = new HashMap<>(){{
-        put("small", 45);
-        put("medium", 30);
-        put("huge", 10);
-    }};
+public class GamePanel extends JPanel implements ActionListener, Levels {
 
     final static int screenWidth = 900;
     final static int screenHeight = 900;
@@ -52,11 +39,15 @@ public class GamePanel extends JPanel implements ActionListener {
     Random random;
 
     GamePanel(String level, String units) throws IOException {
+        frameSettings();
+        settingsPanel(level, units);
+    }
+
+    private void frameSettings(){
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
         this.setBackground(Color.black);
         this.setFocusable(true);
         this.addKeyListener(new MyKeyAdapter());
-        settingsPanel(level, units);
     }
 
 
@@ -104,7 +95,7 @@ public class GamePanel extends JPanel implements ActionListener {
                     }
                 }
                 else{
-                    g.setColor(new Color(38, 231, 6));
+                    g.setColor(new Color(29, 109, 0));
                     g.fillOval(x[i], y[i], unitSize, unitSize);
                 }
             }
@@ -207,8 +198,6 @@ public class GamePanel extends JPanel implements ActionListener {
             }
         }
         repaint();
-
-
     }
 
     public static class MyKeyAdapter extends KeyAdapter {

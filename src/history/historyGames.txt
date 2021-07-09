@@ -4,3 +4,39 @@ Game Size : huge
 Score (apples eaten) : 2
 
 
+Date game : pt., 02 lip 2021 12:56:41 CEST
+Level : hard
+Game Size : huge
+Score (apples eaten) : 0
+
+
+Date game : pt., 02 lip 2021 12:57:03 CEST
+Level : medium
+Game Size : medium
+Score (apples eaten) : 0
+
+
+Date game : pt., 02 lip 2021 15:46:50 CEST
+Level : hard
+Game Size : medium
+Score (apples eaten) : 2
+
+
+Date game : pt., 02 lip 2021 15:47:27 CEST
+Level : hard
+Game Size : medium
+Score (apples eaten) : 9
+
+
+Date game : pt., 09 lip 2021 10:53:22 CEST
+Level : hard
+Game Size : medium
+Score (apples eaten) : 2
+
+
+Date game : pt., 09 lip 2021 11:22:56 CEST
+Level : medium
+Game Size : small
+Score (apples eaten) : 10
+
+

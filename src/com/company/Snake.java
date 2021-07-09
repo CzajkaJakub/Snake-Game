@@ -7,8 +7,8 @@ public class Snake {
         new SettingsFrame();
     }
 
-    public static void startGame(String level, String unit, SettingsFrame frame) throws IOException {
-        frame.dispose();
+    public static void startGame(String level, String unit, SettingsFrame settingsFrame) throws IOException {
+        settingsFrame.dispose();
         new GameFrame(level, unit);
     }
 }
