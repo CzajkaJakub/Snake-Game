@@ -34,3 +34,9 @@ Game Size : medium
 Score (apples eaten) : 2
 
 
+Date game : pt., 09 lip 2021 11:22:56 CEST
+Level : medium
+Game Size : small
+Score (apples eaten) : 10
+
+
