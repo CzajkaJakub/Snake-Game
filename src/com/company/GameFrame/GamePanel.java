@@ -1,5 +1,8 @@
-package com.company;
+package com.company.GameFrame;
 
+
+import com.company.GameOverFrame.GameOverPanel;
+import com.company.Music.MusicPanel;
 
 import javax.imageio.ImageIO;
 import javax.sound.sampled.LineUnavailableException;
@@ -14,31 +17,29 @@ import java.util.Random;
 
 
 public class GamePanel extends JPanel implements ActionListener, Levels {
+    private final int screenWidth = 900;
+    private final int screenHeight = 900;
+    private BufferedImage appleImage;
+    private BufferedImage snakeHeadImageR;
+    private BufferedImage snakeHeadImageD;
+    private BufferedImage snakeHeadImageL;
+    private BufferedImage snakeHeadImageU;
+    private int unitSize;
+    private int delay;
+    private int bodyParts = 6;
+    private int[] x;
+    private int[] y;
+    private int applesEaten;
+    private int appleX;
+    private int appleY;
+    private String level;
+    private String gameSize;
+    private char direction = 'R';
+    private boolean running = false;
+    private Timer timer;
+    private Random random;
 
-    final static int screenWidth = 900;
-    final static int screenHeight = 900;
-    static BufferedImage appleImage;
-    static BufferedImage snakeHeadImageR;
-    static BufferedImage snakeHeadImageD;
-    static BufferedImage snakeHeadImageL;
-    static BufferedImage snakeHeadImageU;
-    static int unitSize;
-    static int gameUnits;
-    static int delay;
-    static int[] x;
-    static int[] y;
-    static int bodyParts = 6;
-    static int applesEaten;
-    static int appleX;
-    static int appleY;
-    static String level;
-    static String gameSize;
-    static char direction = 'R';
-    static boolean running = false;
-    Timer timer;
-    Random random;
-
-    GamePanel(String level, String units) throws IOException {
+    public GamePanel(String level, String units) throws IOException {
         frameSettings();
         settingsPanel(level, units);
     }
@@ -55,8 +56,8 @@ public class GamePanel extends JPanel implements ActionListener, Levels {
         gameSize = units;
         level = lev;
         delay = levels.get(level);
-        unitSize = gameUnit.get(gameSize);
-        gameUnits = (screenWidth*screenHeight)/unitSize;
+        unitSize = gameUnit.get(units);
+        int gameUnits = (screenWidth * screenHeight) / unitSize;
         x = new int[gameUnits];
         y = new int[gameUnits];
         random = new Random();
@@ -200,7 +201,7 @@ public class GamePanel extends JPanel implements ActionListener, Levels {
         repaint();
     }
 
-    public static class MyKeyAdapter extends KeyAdapter {
+    public class MyKeyAdapter extends KeyAdapter {
         @Override
         public void keyPressed(KeyEvent e) {
             if (e.getKeyCode() == KeyEvent.VK_LEFT) {

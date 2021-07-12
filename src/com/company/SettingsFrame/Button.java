@@ -1,13 +1,13 @@
-package com.company;
+package com.company.SettingsFrame;
 
 import javax.swing.*;
 import java.awt.*;
 
 public class Button extends JButton {
 
-    protected String name;
+    public String name;
 
-    Button(String name, int x, int y){
+    public Button(String name, int x, int y){
         this.name = name;
         this.setFocusable(false);
         this.setText(name);

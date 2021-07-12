@@ -1,4 +1,4 @@
-package com.company;
+package com.company.SettingsFrame;
 
 public interface ButtonTypes {
     Button easyLevel = new Button("Easy", 75, 630);

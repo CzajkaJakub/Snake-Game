@@ -1,17 +1,11 @@
-package com.company;
+package com.company.Music;
 
 
 import javax.sound.sampled.*;
-import java.io.File;
 import java.io.IOException;
 
 
-public class MusicPanel {
-
-    private final static File snakeSong = new File("src/song/snakeSound.wav");
-    private final static File backGroundMusicFile = new File("src/song/backgroundMusic.wav");
-    private final static File pointCollectFile = new File("src/song/pointCollect.wav");
-    private final static File gameOverFile = new File("src/song/gameOver.wav");
+public class MusicPanel implements MusicFiles{
 
     static AudioInputStream gameOverAudio;
     static Clip gameOverClip;

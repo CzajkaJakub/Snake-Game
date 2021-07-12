@@ -1,4 +1,4 @@
-package com.company;
+package com.company.GameFrame;
 
 import java.util.HashMap;
 

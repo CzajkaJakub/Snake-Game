@@ -46,3 +46,51 @@ Game Size : medium
 Score (apples eaten) : 5
 
 
+Date game : pon., 12 lip 2021 19:06:35 CEST
+Level : medium
+Game Size : small
+Score (apples eaten) : 4
+
+
+Date game : pon., 12 lip 2021 19:08:51 CEST
+Level : medium
+Game Size : medium
+Score (apples eaten) : 0
+
+
+Date game : pon., 12 lip 2021 19:09:14 CEST
+Level : hard
+Game Size : huge
+Score (apples eaten) : 0
+
+
+Date game : pon., 12 lip 2021 19:13:07 CEST
+Level : medium
+Game Size : medium
+Score (apples eaten) : 0
+
+
+Date game : pon., 12 lip 2021 19:13:22 CEST
+Level : easy
+Game Size : huge
+Score (apples eaten) : 1
+
+
+Date game : pon., 12 lip 2021 19:13:25 CEST
+Level : easy
+Game Size : huge
+Score (apples eaten) : 0
+
+
+Date game : pon., 12 lip 2021 19:16:35 CEST
+Level : easy
+Game Size : small
+Score (apples eaten) : 1
+
+
+Date game : pon., 12 lip 2021 19:16:47 CEST
+Level : medium
+Game Size : medium
+Score (apples eaten) : 1
+
+

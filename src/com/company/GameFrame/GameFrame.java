@@ -1,10 +1,12 @@
-package com.company;
+package com.company.GameFrame;
+
+import com.company.ImagesSet.ImageFiles;
 
 import javax.swing.*;
 import java.io.IOException;
 
 public class GameFrame extends JFrame implements ImageFiles {
-    GameFrame(String level, String units) throws IOException {
+    public GameFrame(String level, String units) throws IOException {
         GamePanel panel = new GamePanel(level, units);
         frameSettings(panel);
     }
@@ -19,4 +21,5 @@ public class GameFrame extends JFrame implements ImageFiles {
         this.setVisible(true);
         this.setLocationRelativeTo(null);
     }
+
 }

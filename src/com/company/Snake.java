@@ -1,5 +1,8 @@
 package com.company;
 
+import com.company.GameFrame.GameFrame;
+import com.company.SettingsFrame.SettingsFrame;
+
 import java.io.IOException;
 
 public class Snake {
@@ -11,5 +14,7 @@ public class Snake {
         settingsFrame.dispose();
         new GameFrame(level, unit);
     }
+
+
 }
 

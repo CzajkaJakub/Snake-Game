@@ -1,4 +1,8 @@
-package com.company;
+package com.company.SettingsFrame;
+
+import com.company.*;
+import com.company.ImagesSet.ImageFiles;
+import com.company.Music.MusicPanel;
 
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
@@ -8,27 +12,15 @@ import java.io.IOException;
 
 public class SettingsFrame extends JFrame implements ButtonTypes, ImageFiles {
 
-    private static String userLevel;
-    private static String userUnits;
-    private static PreImage backGround;
-    private static PreImage snakeImage;
-    private static PreImage difWordL;
-    private static PreImage sizeWordL;
-    private static Button pressedLevel = easyLevel;
-    private static Button pressedSize = smallWindow;
+    private String userLevel;
+    private String userUnits;
+    private Button pressedLevel = easyLevel;
+    private Button pressedSize = smallWindow;
 
-    SettingsFrame(){
+    public SettingsFrame(){
         MusicPanel.playSnakeSong();
-        setImages();
         setSettingsFrame();
         listeners();
-    }
-
-    private void setImages(){
-        backGround = new PreImage(snakeWord, 283, 20, 333, 103);
-        snakeImage = new PreImage(snakeBackgroundIcon, 139, 143, 622, 400);
-        difWordL = new PreImage(difWord, 132, 550, 636, 70);
-        sizeWordL = new PreImage(sizeWord, 87, 700, 726, 70);
     }
 
     private void setSettingsFrame(){
@@ -36,7 +28,6 @@ public class SettingsFrame extends JFrame implements ButtonTypes, ImageFiles {
         this.setSize(900, 900);
         this.setLocationRelativeTo(null);
         this.setResizable(false);
-        this.setVisible(true);
         this.setTitle("Snake Game");
         this.getContentPane().setBackground(Color.BLACK);
         this.setIconImage(windowIcon.getImage());
@@ -52,6 +43,7 @@ public class SettingsFrame extends JFrame implements ButtonTypes, ImageFiles {
         this.add(hugeWindow);
         this.add(startButton);
         this.add(sizeWordL);
+        this.setVisible(true);
     }
 
     private void setUserLevel(Button button) {
