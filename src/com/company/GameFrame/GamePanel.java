@@ -66,11 +66,11 @@ public class GamePanel extends JPanel implements ActionListener, Levels {
     }
 
     public void readImages() throws IOException {
-        appleImage = ImageIO.read(new File("images/apple" + unitSize +".png"));
-        snakeHeadImageR = ImageIO.read((new File("images/snakeHeadR" + unitSize + ".png")));
-        snakeHeadImageD = ImageIO.read((new File("images/snakeHeadD" + unitSize + ".png")));
-        snakeHeadImageL = ImageIO.read((new File("images/snakeHeadL" + unitSize + ".png")));
-        snakeHeadImageU = ImageIO.read((new File("images/snakeHeadU" + unitSize + ".png")));
+        appleImage = ImageIO.read(new File("resources/images/AppleImages/apple" + unitSize +".png"));
+        snakeHeadImageR = ImageIO.read((new File("resources/images/SnakeHeadImages/" + unitSize + "px/" + "snakeHeadR" + unitSize + ".png")));
+        snakeHeadImageD = ImageIO.read((new File("resources/images/SnakeHeadImages/" + unitSize + "px/" + "snakeHeadD" + unitSize + ".png")));
+        snakeHeadImageL = ImageIO.read((new File("resources/images/SnakeHeadImages/" + unitSize + "px/" + "snakeHeadL" + unitSize + ".png")));
+        snakeHeadImageU = ImageIO.read((new File("resources/images/SnakeHeadImages/" + unitSize + "px/" + "snakeHeadU" + unitSize + ".png")));
     }
 
     public void startGame() throws IOException {

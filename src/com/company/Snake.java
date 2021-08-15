@@ -14,7 +14,5 @@ public class Snake {
         settingsFrame.dispose();
         new GameFrame(level, unit);
     }
-
-
 }
 

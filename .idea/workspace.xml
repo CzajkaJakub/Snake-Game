@@ -9,7 +9,50 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="663b4b18-0cbf-41dc-abe3-2c022c97367d" name="Default Changelist" comment="" />
+    <list default="true" id="663b4b18-0cbf-41dc-abe3-2c022c97367d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Snake-Game.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Snake.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sounds/backgroundMusic.wav" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Sounds/backgroundMusic.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sounds/gameOver.wav" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Sounds/gameOver.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sounds/pointCollect.wav" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Sounds/pointCollect.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sounds/snakeSound.wav" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Sounds/snakeSound.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AppleImages/apple10.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/AppleImages/apple10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AppleImages/apple30.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/AppleImages/apple30.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/AppleImages/apple45.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/AppleImages/apple45.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/GameIcon/SnakeIcon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/GameIcon/SnakeIcon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/GameIcon/snake.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/GameIcon/snake.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Inscriptions/applesEaten.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/Inscriptions/applesEaten.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Inscriptions/difficultyWord.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/Inscriptions/difficultyWord.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Inscriptions/gameOver.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/Inscriptions/gameOver.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Inscriptions/sizeWord.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/Inscriptions/sizeWord.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Inscriptions/snakeWord.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/Inscriptions/snakeWord.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/SnakeHeadImages/10px/snakeHeadD10.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/SnakeHeadImages/10px/snakeHeadD10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/SnakeHeadImages/10px/snakeHeadL10.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/SnakeHeadImages/10px/snakeHeadL10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/SnakeHeadImages/10px/snakeHeadR10.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/SnakeHeadImages/10px/snakeHeadR10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/SnakeHeadImages/10px/snakeHeadU10.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/SnakeHeadImages/10px/snakeHeadU10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/SnakeHeadImages/30px/snakeHeadD30.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/SnakeHeadImages/30px/snakeHeadD30.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/SnakeHeadImages/30px/snakeHeadL30.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/SnakeHeadImages/30px/snakeHeadL30.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/SnakeHeadImages/30px/snakeHeadR30.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/SnakeHeadImages/30px/snakeHeadR30.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/SnakeHeadImages/30px/snakeHeadU30.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/SnakeHeadImages/30px/snakeHeadU30.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/SnakeHeadImages/45px/snakeHeadD45.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/SnakeHeadImages/45px/snakeHeadD45.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/SnakeHeadImages/45px/snakeHeadL45.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/SnakeHeadImages/45px/snakeHeadL45.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/SnakeHeadImages/45px/snakeHeadR45.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/SnakeHeadImages/45px/snakeHeadR45.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/SnakeHeadImages/45px/snakeHeadU45.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/SnakeHeadImages/45px/snakeHeadU45.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/SnakeImage/snakeBackgroundImage.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/SnakeImage/snakeBackgroundImage.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/[U]Snake-Game/history/historyGames.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/game.png" beforeDir="false" afterPath="$PROJECT_DIR$/GameScreenshots/game.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/gameOver.png" beforeDir="false" afterPath="$PROJECT_DIR$/GameScreenshots/gameOver.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/historicalGames.png" beforeDir="false" afterPath="$PROJECT_DIR$/GameScreenshots/historicalGames.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/settingsGame.png" beforeDir="false" afterPath="$PROJECT_DIR$/GameScreenshots/settingsGame.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/GameFrame/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/GameFrame/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/GameOverFrame/SaveRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/GameOverFrame/SaveRecord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/ImagesSet/ImageFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/ImagesSet/ImageFiles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Music/MusicFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Music/MusicFiles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Snake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Snake.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/history/historyGames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/history/historyGames.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,15 +70,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/com/company/GameFrame/Levels.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/com/company/ImagesSet/SetImagePosition.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/com/company/SettingsFrame/ButtonTypes.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/com/company/GameFrame/GamePanel.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/com/company/ImagesSet/ImageFiles.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/com/company/GameOverFrame/SaveRecord.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/com/company/Music/MusicFiles.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/com/company/Snake.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/com/company/ImagesSet/SetImagePosition.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/com/company/GameOverFrame/GameOverPanel.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/com/company/GameOverFrame/SaveRecord.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/com/company/SettingsFrame/ButtonTypes.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/com/company/Music/MusicFiles.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/com/company/GameFrame/Levels.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/com/company/GameFrame/GamePanel.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/com/company/Snake.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1uaTmSpfD0YKrfjKUVE7kA14LYN" />
   <component name="ProjectViewState">
@@ -47,7 +90,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -59,11 +104,11 @@
       <recent name="com.company" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\programowanie\GitHub\Java\[U]Snake-Game\resources" />
       <recent name="D:\programowanie\GitHub\Java\[U]Snake-Game" />
       <recent name="D:\programowanie\GitHub\Java\[U]Snake-Game\images\SnakeImage" />
       <recent name="D:\programowanie\GitHub\Java\[U]Snake-Game\images\Inscriptions" />
       <recent name="D:\programowanie\GitHub\Java\[U]Snake-Game\images\GameIcon" />
-      <recent name="D:\programowanie\GitHub\Java\[U]Snake-Game\images\SnakeHeadImages\45px" />
     </key>
   </component>
   <component name="RunManager">
@@ -91,8 +136,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1624902858734</updated>
+      <workItem from="1629021380089" duration="102000" />
+      <workItem from="1629041603351" duration="492000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
